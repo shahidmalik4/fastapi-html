@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ action }} Post{% endblock %}
+
+{% block content %}
+<h2>{{ action }} Post</h2>
+<form method="post">
+    <div class="mb-3">
+        <label>Title</label>
+        <input type="text" name="title" class="form-control" value="{{ post.title if post else '' }}" required />
+    </div>
+    <div class="mb-3">
+        <label>Content</label>
+        <textarea name="content" class="form-control" rows="6" required>{{ post.content if post else '' }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">{{ action }}</button>
+</form>
+{% endblock %}

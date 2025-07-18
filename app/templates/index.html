@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Blog Home{% endblock %}
+
+{% block content %}
+<h1>Recent Posts</h1>
+{% for post in posts %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.content[:150] }}...</p>
+            <a href="/post/{{ post.slug }}" class="btn btn-sm btn-primary">Read More</a>
+            <a href="/post/{{ post.slug }}">{{ post.title }}</a>
+        </div>
+    </div>
+{% else %}
+    <p>No posts yet. {% if user %}<a href="/post/create">Create one!</a>{% endif %}</p>
+{% endfor %}
+{% endblock %}
