@@ -97,7 +97,7 @@ uvicorn app.main:app --reload
 | `/create-post`    | GET/POST | ✅           | Create a new post        |
 | `/edit-post/{id}` | GET/POST | ✅           | Edit an existing post    |
 | `/delete-post/{id}`| GET     | ✅           | Delete a post            |
-| `/post/{slug}`    | GET     | ❌           | View a single post       |
+| `/post/{slug}`    | GET     | ✅           | View a single post       |
 
 ---
 
