@@ -101,7 +101,7 @@ uvicorn app.main:app --reload
 
 ---
 
-## 🧾 Models & Schemas
+## 🧾 Models
 
 ```python
 🧍 User (SQLAlchemy)
