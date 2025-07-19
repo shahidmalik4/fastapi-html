@@ -105,9 +105,12 @@ uvicorn app.main:app --reload
 
 ```python
 🧍 User (SQLAlchemy)
-📝 Post (SQLAlchemy)```
+📝 Post (SQLAlchemy)
+```
 
-### 📦 Pydantic Schemas
+---
+
+## 📦 Pydantic Schemas
 
 ```python
 class UserCreate(BaseModel):
