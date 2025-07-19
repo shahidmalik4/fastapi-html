@@ -119,99 +119,21 @@ uvicorn app.main:app --reload
 
 ```python
 class UserCreate(BaseModel):
-    username: str
-    password: str
-
 class UserOut(BaseModel):
-    id: int
-    username: str
-    class Config:
-        orm_mode = True
-
 class PostBase(BaseModel):
-    title: str
-    content: str
-
 class PostCreate(PostBase):
-    slug: Optional[str] = None
-
 class PostOut(PostBase):
-    id: int
-    slug: str
-    class Config:
-        orm_mode = True
 ```
 
 ---
 
-## ⚙️ Environment Variables
-
-Create a `.env` file (or configure environment manually):
-
-```env
-SECRET_KEY=your_secret_key
-DATABASE_URL=sqlite:///./blog_app.db
-```
-
 ---
 
-## 💬 Flash Messages
-
-Implemented using custom middleware and session cookies. You’ll see success or error messages after login, logout, and form actions.
-
----
-
-## 🧪 Testing
-
-Coming soon. You can use [TestClient](https://fastapi.tiangolo.com/tutorial/testing/) from FastAPI and Pytest for full test coverage.
-
----
 
 ## 📤 Deployment (Render Example)
 
 `render.yml` already included for Render deployment.
 
 > You can also deploy using Docker, Heroku, or any ASGI-compatible cloud.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/feature-name`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/feature-name`)
-5. Create a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
-```
-MIT License
-
-Copyright (c) 2025 Shahid
-
-Permission is hereby granted, free of charge, to any person obtaining a copy...
-```
-
-> Full license text is in [LICENSE](./LICENSE)
-
----
-
-## 👤 Author
-
-**Shahid Malik**  
-📬 [@shahidmalik4](https://github.com/shahidmalik4)
-
----
-
-## 🙋‍♂️ Questions or Suggestions?
-
-Open an [issue](https://github.com/shahidmalik4/fastapi-html/issues) or start a discussion.
 
 ---
