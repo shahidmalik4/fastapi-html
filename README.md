@@ -103,17 +103,9 @@ uvicorn app.main:app --reload
 
 ## 🧾 Models & Schemas
 
-### 🧍 User (SQLAlchemy)
-- `id: int`
-- `username: str`
-- `hashed_password: str`
-
-### 📝 Post (SQLAlchemy)
-- `id: int`
-- `title: str`
-- `content: str`
-- `slug: str`
-- `owner_id: int`
+```python
+🧍 User (SQLAlchemy)
+📝 Post (SQLAlchemy)```
 
 ### 📦 Pydantic Schemas
 
@@ -124,8 +116,6 @@ class PostBase(BaseModel):
 class PostCreate(PostBase):
 class PostOut(PostBase):
 ```
-
----
 
 ---
 
